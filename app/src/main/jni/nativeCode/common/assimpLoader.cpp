@@ -292,6 +292,7 @@ void AssimpLoader::Render3DModel(glm::mat4 *mvpMat) {
     unsigned int numberOfLoadedMeshes = modelMeshes.size();
 
     // render all meshes
+    //遍历所有网格并且绘制
     for (unsigned int n = 0; n < numberOfLoadedMeshes; ++n) {
 
         // Texture

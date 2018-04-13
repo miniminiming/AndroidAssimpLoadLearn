@@ -64,9 +64,12 @@ void ModelAssimp::PerformGLInits() {
     // extract the OBJ and companion files from assets
     std::string objFilename, mtlFilename, texFilename;
     bool isFilesPresent  =
-            gHelperObject->ExtractAssetReturnFilename("amenemhat/amenemhat.obj", objFilename) &&
-            gHelperObject->ExtractAssetReturnFilename("amenemhat/amenemhat.mtl", mtlFilename) &&
-            gHelperObject->ExtractAssetReturnFilename("amenemhat/amenemhat.jpg", texFilename);
+            gHelperObject->ExtractAssetReturnFilename("foxobj/fox.obj", objFilename) &&
+            gHelperObject->ExtractAssetReturnFilename("foxobj/fox.mtl", mtlFilename) &&
+            gHelperObject->ExtractAssetReturnFilename("foxobj/fox_d.jpg", texFilename);
+//            gHelperObject->ExtractAssetReturnFilename("amenemhat/amenemhat.obj", objFilename) &&
+//            gHelperObject->ExtractAssetReturnFilename("amenemhat/amenemhat.mtl", mtlFilename) &&
+//            gHelperObject->ExtractAssetReturnFilename("amenemhat/amenemhat.jpg", texFilename);
     if( !isFilesPresent ) {
         MyLOGE("Model %s does not exist!", objFilename.c_str());
         return;
